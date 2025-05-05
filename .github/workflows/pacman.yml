@@ -2,8 +2,12 @@ name: Generate Snake and Pacman
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # todo dia à meia-noite
+    - cron: "* * /12 * * *"  # todo dia à meia-noite
   workflow_dispatch:
+
+  push:
+    branches:
+    - main
 
 jobs:
   generate:
